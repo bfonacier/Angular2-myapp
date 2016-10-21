@@ -20,7 +20,7 @@ const HEROES: Hero[] = [
     selector: 'my-app',
     template: `
     <h1>Angular2 App {{title}}</h1>
-        <h2>My Heroes</h2>
+        <h2>My Heroes</h2> <img [src] = 'imageUrl' />
     <ul class="heroes">
       <li *ngFor="let hero of heroes"
         [class.selected]="hero === selectedHero"
@@ -85,6 +85,7 @@ export class AppComponent {
   title = 'Multiple Components';
   heroes = HEROES;
   selectedHero: Hero;
+  imageUrl = 'http://lorempixel.com/240/200';
 
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
